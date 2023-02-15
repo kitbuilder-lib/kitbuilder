@@ -2,3 +2,13 @@
 setup.cfg
 setup.py
 kitbuilder/__init__.py
+kitbuilder/bases/__init__.py
+kitbuilder/constants/__init__.py
+kitbuilder/environment/__init__.py
+kitbuilder/errors/__init__.py
+kitbuilder/factory/__init__.py
+kitbuilder/function/__init__.py
+kitbuilder/meta/__init__.py
+kitbuilder/parser/__init__.py
+kitbuilder/reader/__init__.py
+kitbuilder/utils/__init__.py

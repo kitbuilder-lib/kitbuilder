@@ -1,14 +1,6 @@
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-
-![KitBuilder](assets/header.png)
-
-<div align="center">
-
 # 🔧KitBuilder🔧
 
-</div>
-
- KitBuilder is a library used for generating API-based and CLI-based SDK for multiple programming languages using only one definition file!
+KitBuilder is a library used for generating API-based and CLI-based SDK for multiple programming languages using only one definition file!
 
 # Tutorial
 
@@ -65,4 +57,3 @@ print(pitbull.json())
 Currently, KitBuilder is supported for:
 
 * `Python`
-
