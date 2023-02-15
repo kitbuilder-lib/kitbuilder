@@ -14,11 +14,13 @@
 
 Initialization is pretty straight-forward. Simply install the package for your programming language, import and run `build` function.
 
-> Tutorial below showcases how to run KitBuilder on Python 3.x
+> Tutorial below showcases how to run KitBuilder on Python
 
 1. Install KitBuilder package
 
-> pip3 install kitbuilder
+```
+pip3 install kitbuilder
+```
 
 2. Create YAML definition with the name of `dog.api.yaml`:
 
@@ -28,7 +30,7 @@ description: Showcase
 
 environment:
     # Will be using DogCEO API
-    API_URL: https://dog.ceo/
+    API_URL: https://dog.ceo
 
 functions:
     get:
@@ -57,6 +59,8 @@ print(pitbull.json())
 ```
 
 # Support
+
+> ***NOTE*** Since KitBuilder is currently `v0.1`, it will be heavily limited in functionality and usage across different programming languages. Goal is to have at least 5 different programming languages supported
 
 Currently, KitBuilder is supported for:
 
