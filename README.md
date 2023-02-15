@@ -60,5 +60,5 @@ print(pitbull.json())
 
 Currently, KitBuilder is supported for:
 
-* `Python` `3`
+* `Python`
 
