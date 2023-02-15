@@ -9,6 +9,3 @@ class Environment:
 
     def list_all(self) -> dict:
         return self.__data
-
-    def merge(self, env_obj) -> None:
-        self.__data = { **self.__data, **env_obj.__data }

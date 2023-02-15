@@ -50,9 +50,9 @@ class Parser:
 
     def __parse(self):
         for key in self.__content:
+            self.__set_imports(key)
             self.__set_meta(key)
             self.__set_env(key)
-            self.__set_imports(key)
             self.__set_construct(key)
             self.__set_functions(key)
         
@@ -80,6 +80,13 @@ class Parser:
 
                 self.__functions.append(Function({ **func, "name": funcs_key }, self.__environment))
 
+    def __update_object(self, content_obj, key: str) -> None:
+        if key in content_obj and key in self.__content:
+            self.__content[key] = {
+                **self.__content[key],
+                **content_obj[key]
+        }
+
     def __set_imports(self, key: str) -> None:
         if key == GLOBAL_IMPORT_DEF:
             import_path = self.__content[key]
@@ -89,7 +96,7 @@ class Parser:
             
             internal_parser = Parser(import_path)
             
-            self.__environment.merge(internal_parser.__environment)
+            self.__update_object(internal_parser.__content, GLOBAL_ENV_DEF)
     
     def __set_meta(self, key: str) -> None:
         if key == GLOBAL_NAME_DEF:
@@ -98,7 +105,7 @@ class Parser:
             self.__meta.add(key, self.__content[key])
 
     def __set_env(self, key: str):
-        if key == 'environment':
+        if key == GLOBAL_ENV_DEF:
             env_obj = self.__content[key]
 
             if type(env_obj) != dict:

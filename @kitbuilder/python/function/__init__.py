@@ -49,12 +49,14 @@ class Function:
         self.__parse(func)
 
     def get(self):
-        return {
-            "name": self.__name,
-            "type": self.__type,
-            "args": self.__args,
-            "config": self.__config
-        }
+        func = {}
+        
+        func[FUNCTION_NAME_DEF] = self.__name
+        func[FUNCTION_ARGS_DEF] = self.__args
+        func[FUNCTION_CONFIG_DEF] = self.__config
+        func[FUNCTION_TYPE_DEF] = self.__type
+
+        return func
 
     def __parse(self, func: dict)->None:
         self.__input = func

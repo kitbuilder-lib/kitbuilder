@@ -7,7 +7,8 @@ from ast import literal_eval
 # Errors
 from ..errors import (
     raise_missing_argument,
-    raise_invalid_variable
+    raise_invalid_variable,
+    raise_invalid_argument
 )
 
 # Constants
@@ -34,6 +35,9 @@ def get_type(obj):
 
 def parse_args(__args, args, kwargs):    
     if len(args) != len(__args):
+        for key in kwargs:
+            if key not in __args:
+                raise_invalid_argument(key)
         for key in __args:
             if key not in kwargs:
                 raise_missing_argument(key)

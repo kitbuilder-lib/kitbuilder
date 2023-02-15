@@ -12,3 +12,6 @@ def raise_missing_argument(key: str):
 
 def raise_invalid_name(key: str):
     raise Exception(f"Invalid function name: {key}")
+
+def raise_invalid_argument(key: str):
+    raise Exception(f"Invalid argument found: {key}")
