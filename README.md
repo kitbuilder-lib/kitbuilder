@@ -49,7 +49,7 @@ functions:
 ```python
 from kitbuilder import Kit
 
-DogAPI = Kit("dog.api.yml").build()
+DogAPI = Kit("dog.api.yaml").build()
 
 api = DogAPI()
 
